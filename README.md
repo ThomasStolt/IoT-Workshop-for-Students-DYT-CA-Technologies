@@ -11,3 +11,15 @@ The cost of a single workplace (per student) is around 15€. To recreate this w
 Feel free to us this workshop as is, improve it or send us pull requests! Contact us with any questions.
 
 Thanks
+
+Here is the current structure of this repository:
+
+'''
+|
++- reamde.md
+|
++- presentations
+|
++ - scripts
+|
+'''
