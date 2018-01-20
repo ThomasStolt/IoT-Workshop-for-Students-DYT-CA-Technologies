@@ -14,7 +14,7 @@ Thanks
 
 Here is the current structure of this repository:
 
-'''
+<pre>
 |
 +- reamde.md
 |
@@ -23,4 +23,4 @@ Here is the current structure of this repository:
 + - scripts
 |
 + - more stuff
-'''
+</pre>
