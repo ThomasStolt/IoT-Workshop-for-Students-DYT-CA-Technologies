@@ -23,7 +23,9 @@ Here is the current structure of this repository:
 <pre>
 .
 ├── Presentations
+│   This is the main presentation that we use to walk through the workshop.
 ├── Scripts
+│   Here is the src code, all the scripts that are needed.
 └── Software
     ├── ESPlorer
     │   ├── lib
