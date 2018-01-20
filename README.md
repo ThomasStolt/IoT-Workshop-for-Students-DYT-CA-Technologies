@@ -1,6 +1,6 @@
 # Deploy-Your-Talent
 
-This repository collects material around a workshop that a team of CA Technologies created to help students (aged around 14) get a taste of IT technology and coding. CA running a world wide program, through which CA invests a lot time, money and other resources to promote STEM education. We are a group of enthusiastic employees who contribute to this program, there are other CA employees who do similar things.
+This repository collects material around a workshop that a team of consultants at CA Technologies created to help students (aged around 14) get a taste of IT technology and coding. CA running a world wide program, through which CA invests a lot time, money and other resources to promote STEM education. We are a group of enthusiastic employees who contribute to this program, there are other CA employees who do similar things.
 
 We use a simple IoT example, based on MircoPython, an ESP2866 Microcontroller (NodeMCU), lights (NeoPixel LEDs), a temperature sensor (DS18B20) and an MQTT broker (sitting on a RaspberryPi) to show how simple students can built their own IoT application.
 
