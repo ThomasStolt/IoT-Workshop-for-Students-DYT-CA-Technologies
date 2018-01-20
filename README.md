@@ -45,7 +45,6 @@ Here is the current structure of this repository:
     │   ├── additional stuff
     │   ├── java
     │   └── USB driver
-    ├── Mac
     ├── MicroPython
     │   here are MicroPython firmwares stored
     └── Windows
