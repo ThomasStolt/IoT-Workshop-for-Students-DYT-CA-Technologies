@@ -22,12 +22,22 @@ Here is the current structure of this repository:
 
 <pre>
 .
-├── Presentations
-│   This is the main presentation that we use to walk through the workshop.
+├── fonts
+│   these fonts are used in the presentation(s)
+│   └── CA_Sans_FINAL
+│       this is a proprietary font, please don't use without permission
+│       ├── CA Sans OpenType
+│       └── CA Sans TrueType
+├── images
+│   some images that are used in README.md's
+├── presentations
+│   this is the presentation we use for the walkthrough at the workshop
 ├── src
-│   Here is the src code, all the scripts that are needed.
-└── Software
+│   here are the scripts that we use during the workshop
+└── tools
+    some tools and software that is useful/needed for this workshop
     ├── ESPlorer
+    │   a good IDE for the ESP controllers, allows a more comfortable way of coding
     │   ├── lib
     │   ├── _lua
     │   └── _micropython
@@ -37,11 +47,16 @@ Here is the current structure of this repository:
     │   └── USB driver
     ├── Mac
     ├── MicroPython
+    │   here are MicroPython firmwares stored
     └── Windows
+        │ in Windows, you might need to install these drivers for the boards to be recognised
         ├── CP210x_Windows_Drivers
         │   ├── x64
         │   └── x86
         ├── Java
+        │   Coffee!
         └── NodeMCU Flasher
+            │ in Windows use this tool to flash the ESP8266 boards
             └── Config
+
 </pre>
