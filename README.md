@@ -4,10 +4,13 @@ This repository collects material around a workshop that a team of consultants a
 
 We use a simple IoT example, based on MicroPython, an ESP2866 Microcontroller (NodeMCU) on a breadboard, lights (NeoPixel LEDs), a temperature sensor (DS18B20) and an MQTT broker (sitting on a RaspberryPi) to show how simple students can built their own IoT application.
 Here is an example of how the breadboard is to be built:
+
 ![alt text](https://github.com/Crayfish68/IoT-Workshop-for-Students-DYT-CA-Technologies/blob/master/Images/Breadboard.png)
 
+At the end of this workshop (about 45 minutes), the students should have an understanding of what (technologies) IoT is made up of and be able to control a ring of LEDs from their phone and vice versa read/see temperature of a sensor on their phone.  The attached picture is what they will build during this workshop, we will walk them through each bit. (The presentation animates this graphic.)
 
-At the end of this workshop (about 45 minutes), the students should have an understanding of what (technologies) IoT is made up of and be able to control a ring of LEDs from their phone and vice versa read/see temperature of a sensor on their phone.
+![alt text](https://github.com/Crayfish68/IoT-Workshop-for-Students-DYT-CA-Technologies/blob/master/Images/IoT%20Workshop%20Overview.png)
+
 
 The cost of a single workplace (per student) is around 15€. To recreate this workshop, a public MQTT broker service (such as Adafruit.io) will do, to run a class of 10 or more students, you'll need to set up your own MQTT broker (mosquitto with NodeRED) somewhere.
 
