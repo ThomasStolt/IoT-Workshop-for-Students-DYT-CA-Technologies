@@ -15,12 +15,24 @@ Thanks
 Here is the current structure of this repository:
 
 <pre>
-|
-+- reamde.md
-|
-+- presentations
-|
-+ - scripts
-|
-+ - more stuff
+.
+├── scripts
+└── Software
+    ├── ESPlorer
+    │   ├── lib
+    │   ├── _lua
+    │   └── _micropython
+    ├── mac
+    │   ├── additional stuff
+    │   ├── java
+    │   └── USB driver
+    ├── Mac
+    ├── MicroPython
+    └── Windows
+        ├── CP210x_Windows_Drivers
+        │   ├── x64
+        │   └── x86
+        ├── Java
+        └── NodeMCU Flasher
+            └── Config
 </pre>
