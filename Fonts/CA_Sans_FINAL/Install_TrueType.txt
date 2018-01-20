@@ -1,0 +1,30 @@
+22 April 2010re:Manually installing our new corporate font CA Sans
+
+A TrueType version of CA Sans is available for use with software and systems which cannot accommodate an OpenType font format (this includes PowerPoint 2007, which has problems using OpenType fonts). 
+Easy Install
+Windows automatically installs the fonts into the system if you copy the fonts into Control Panel > Fonts. (In most instances, the font becomes active and available without even restarting.)
+1. Go to the Start button and click it.
+2. Choose Settings and Control Panel.
+3. Choose Fonts
+4. Unzip the fonts and copy the font documents into the Fonts folder. You should see a message that the fonts are being installed.
+Legacy Install
+1. Via Start > Settings > select Control Panels
+2. Double-click on Fonts
+3. When open, under File > select Install New Fonts…
+4. Via window, browse to the CA Fonts Folder 
+(If it’s on your desktop – C: > Documents and Settings > [your PMF key] > Desktop > Double click the CA Fonts Folder)
+5. Once the folder is selected it may take a few seconds, then all four CA Sans font options – Regular, Italic, Bold, Bold Italic should show up in the top window
+6. Click the Select All button at the right (the Copy Fonts to Fonts folder should be checked by default; if not, check it now)
+7. Click Install
+
+
+
+
+
+
+
+
+2
+
+	
+
