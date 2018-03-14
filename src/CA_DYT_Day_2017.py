@@ -10,9 +10,10 @@ from umqtt.robust import MQTTClient
 # ab hier anpassen bis ....
 ARBEITSPLATZ=""
 WLAN_ESSID = ""
+WLAN_PASSWORD = ""
 MY_MQTT_URL = ""
 MY_MQTT_USERNAME = "..."
-WLAN_PASSWORD = ""
+MY_MQTT_KEY = "..."
 MY_MQTT_PORT = 
 # ... bis hier!
 
@@ -21,7 +22,6 @@ PIXEL_COUNT = 24
 PIXEL_BRIGHTNESS = 40
 DS1820_PIN = 5
 MY_MQTT_CLIENT = "Platz"+ARBEITSPLATZ
-MY_MQTT_KEY = "..."
 RUN = True
 
 
@@ -97,7 +97,7 @@ def sub_cb(topic, msg):
 # MQTT konfigurieren
 ####################
 # MQTT client Objekt kreieren
-c = MQTTClient(MY_MQTT_CLIENT, MY_MQTT_URL, MY_MQTT_PORT)
+c = MQTTClient(MY_MQTT_CLIENT, MY_MQTT_URL, MY_MQTT_PORT, MY_MQTT_USERNAME, MY_MQTT_KEY)
 # MQTT Callback definieren
 c.set_callback(sub_cb)
 # Zum MQTT Server verbinden
