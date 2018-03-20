@@ -11,17 +11,17 @@ from umqtt.robust import MQTTClient
 ARBEITSPLATZ=""
 WLAN_ESSID = ""
 WLAN_PASSWORD = ""
-MY_MQTT_URL = ""
-MY_MQTT_USERNAME = "..."
-MY_MQTT_KEY = "..."
-MY_MQTT_PORT = 
+MQTT_URL = ""
+MQTT_USERNAME = ""
+MQTT_KEY = ""
+MQTT_PORT = 1883
 # ... bis hier!
 
 PIXEL_PIN = machine.Pin(2, machine.Pin.OUT)
 PIXEL_COUNT = 24
 PIXEL_BRIGHTNESS = 40
 DS1820_PIN = 5
-MY_MQTT_CLIENT = "Platz"+ARBEITSPLATZ
+MQTT_CLIENT = "Platz"+ARBEITSPLATZ
 RUN = True
 
 
@@ -92,12 +92,16 @@ def sub_cb(topic, msg):
         led_colour = ((int(msg[1:3],16), int(msg[3:5],16), int(msg[5:],16)))
     elif "stop" in topic:
         RUN = False
+    elif "rainbow" in topic:
+        print('rainbow')
+        rainbowCycle()
+
 
 #Snippet8###########
 # MQTT konfigurieren
 ####################
 # MQTT client Objekt kreieren
-c = MQTTClient(MY_MQTT_CLIENT, MY_MQTT_URL, MY_MQTT_PORT, MY_MQTT_USERNAME, MY_MQTT_KEY)
+c = MQTTClient(MQTT_CLIENT, MQTT_URL, MQTT_PORT, MQTT_USERNAME, MQTT_KEY)
 # MQTT Callback definieren
 c.set_callback(sub_cb)
 # Zum MQTT Server verbinden
@@ -105,6 +109,32 @@ cstatus = c.connect()
 # Topics abonnieren
 c.subscribe(ARBEITSPLATZ+"/farbe")
 c.subscribe(ARBEITSPLATZ+"/stop")
+c.subscribe(ARBEITSPLATZ+"/rainbow")
+
+##########################################
+# NeoPixel Rainbow Animation from Adafruit
+##########################################
+def wheel(pos):
+    """Generate rainbow colors across 0-255 positions."""
+    if pos < 85:
+        return (pos * 3, 255 - pos * 3, 0)
+    elif pos < 170:
+        pos -= 85
+        return (255 - pos * 3, 0, pos * 3)
+    else:
+        pos -= 170
+        return (0, pos * 3, 255 - pos * 3)
+
+def rainbowCycle(wait_ms=2, iterations=1):
+    """Draw rainbow that uniformly distributes itself across all pixels."""
+    for j in range(256*iterations):
+        for i in range(PIXEL_COUNT):
+            tcolour = wheel((int(i * 256 / PIXEL_COUNT) + j) & 255)
+            np[i] = (tcolour)
+            # strip.setPixelColor(i, wheel((int(i * 256 / strip.numPixels()) + j) & 255))
+        np.write()
+        time.sleep(wait_ms/1000.0)
+
 
 # Initiale LED Farbe setzen
 led_colour=((PIXEL_BRIGHTNESS,0,0))
@@ -137,6 +167,7 @@ while RUN:
         TEMP = str(ds.read_temp(rom))
         print("Temperature: ", TEMP, "°C ")
         c.publish(ARBEITSPLATZ+"/temperatur", TEMP)
+
 
 #Snippet10####
 # Programmende
